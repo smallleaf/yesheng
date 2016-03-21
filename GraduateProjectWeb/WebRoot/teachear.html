@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teachear.html</title>
+	
+   <meta http-equiv="Content-Type" content="text/html;charset=gbk" />
+    
+    <link rel="stylesheet" type="text/css" href="CSS/css_bg.css"> 
+    <script type="text/javascript"  src="JS/teacher.js"></script>
+  </head>
+  
+  <body class="login_bg" onload="loading();">
+    <header style="height: 70px;vertical-align: middle;">
+    <div>
+   			<img  src="images/logo_school.png">
+   	 		<h2 style="display: inline;" >毕业选题系统 </h2>
+   	 		<h4 class="span_right" id="teacher_lab" ></h4>
+   	 		<a class="return_right" href="index.html">退出</a>
+   	 		
+    </div>
+    </header>
+    <div class="header_line"></div>
+    <div style="background: #AB82FF;height: 600px;">
+    	<section style="background:#FAFAFA;">
+    		<div id="new_gra" >
+    			<input type="submit" value="新建课题" onclick="new_gra();" style="width: 160px;height: 50px;">
+    		</div>
+    		<div id="create_gra">
+    			<h3 style="margin-top: 10px;text-align: center;">课题信息<input style="float: right;margin-right: 10px;width: 90px;height: 30px;" type="submit" onclick="new_gra();" value="新建课题"/></h3>
+    			
+    			<div style="width: 100%;height: 2px;margin-top:10px;background: #EEE0E5"></div>
+    			<table cellspacing="10" style="text-align: center;margin-left: 25%;margin-top: 10px; height: 100px;">
+    				<tr>
+    					<td id="td_right"><p>课题名称：</p></td>
+    					<td id="td_left"><input style="font-size: 17px;height: 30px;" type="text" id="gra_name"/></td>
+    				</tr>	
+    				<tr >
+    					<td id="td_right" style="vertical-align: top;"><p >课题要求：</p></td>
+    					<td id="td_left"><textarea id="gra_subject" style="height: 120px;width:450px; resize:none ;" /></textarea>
+    				</tr>	
+    				<tr >
+    					<td id="td_right" style="vertical-align: top;"><p >技能要求：</p></td>
+    					<td id="td_left"><textarea style="height: 120px;width:450px; resize:none " id="gra_ability"/></textarea>
+    				</tr>	
+    				<tr >
+    					<td id="td_right" style="vertical-align: top;"><p >容量设置：</p></td>
+    					<td id="td_left"><input style="font-size: 17px;height: 30px;" type="text" id="gra_limit"/></td>  
+    				</tr>	
+    				<tr >
+    					<td><input type="submit" id="but_sub" value="提交" style="width: 80px; height: 30px;" onclick="send();"/></td>
+    					<td><input type="reset" value="清除" id="but_left" style="width: 80px; height: 30px;   " onclick="clear();"/></td>  
+    				</tr>	
+    			</table>
+    		</div>
+    	</section>
+    	<aside style="background:#FAFAFA;">
+    		<h3 style="margin-left: 10px;margin-top: 10px;">毕业课题列表</h3> 
+    		<ul id="cource_list" style="margin-left: 55px;margin-top: 10px; line-height: 30px;" >
+    		</ul>   	
+    	</aside>
+    </div>
+  </body>
+</html>

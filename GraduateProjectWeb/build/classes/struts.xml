@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8"/>
+  <constant name="struts.objectFactory" value="spring" />
+   <constant name="struts.multipart.maxSize" value="20971520"/> 
+     
+     <package name="WTUjson" extends="json-default">
+     		<action name="studentAction_login" class="StudentAction" method="login" >
+      			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+      		</action>
+     		<action name="studentAction_modify" class="StudentAction" method="modify" >
+      			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+      		</action> 
+      		
+      	<action name="student_login_web" class="StudentAction" method="login_wtu">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="student_getInsTeacher" class="StudentAction" method="getInsTeacher">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="st_chooseCource" class="StudentAction" method="chooseCource">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+		
+      	<action name="st_getCourceAndTeacher" class="StudentAction" method="getCourceAndTeacher">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+		
+      	<action name="st_getStudentInfo" class="StudentAction" method="getStudentInfo">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="st_deleteCourcAndUpdateStudent" class="StudentAction" method="deleteCourcAndUpdateStudent">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="st_updateStudent" class="StudentAction" method="updateStudent">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+		
+		
+		
+      	<action name="details_teacher" class="TeacherAction" method="getdetailsTeacher">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="saveCource" class="TeacherAction" method="saveCource">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="updateCource" class="TeacherAction" method="updateCource">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="findAllCource" class="TeacherAction" method="findAllCource">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="te_getAllInstitution" class="TeacherAction" method="getAllInstitution">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="te_login" class="TeacherAction" method="te_login">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+		
+      	<action name="te_getChooseCoureState" class="TeacherAction" method="getChooseCoureState">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="te_verifySuccess" class="TeacherAction" method="verifySuccess">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+		
+		
+		
+		
+		
+		
+      	<action name="getInsAndMajor" class="StudentAction" method="getInsAndMajor">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="ad_getAllTeacher" class="AdministrationAction" method="getAllTeacher">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="ad_getAllInsAndMajor" class="AdministrationAction" method="getAllInsAndMajor">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="ad_saveTeacher" class="AdministrationAction" method="saveTeacher">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="ad_getAllStudent" class="AdministrationAction" method="getAllStudent">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+      	<action name="ad_saveStudent" class="AdministrationAction" method="saveStudent">
+			<result name="success" type="json">
+      				<param name="root">data</param>
+      		</result>  <!--返回值类型设置为json,不设置返回页面--> 
+		</action>
+     </package>
+</struts>
+

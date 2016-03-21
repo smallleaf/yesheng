@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teachear.html</title>
+	
+   <meta http-equiv="Content-Type" content="text/html;charset=gbk" />
+    
+    <link rel="stylesheet" type="text/css" href="CSS/css_bg.css"> 
+    <script type="text/javascript"  src="JS/administration.js"></script>
+    
+    <style type="text/css">
+    	#teacher_info td {
+			height: 35px;
+			}
+    	#student_info td {
+			height: 35px;
+			}
+    	#add_teacher td {
+			height: 45px;
+			}
+    	#add_student td {
+			height: 45px;
+			}
+		.input_cs
+		{
+			width: 200px;
+			height: 30px;
+		}
+    </style>
+  </head>
+  
+  <body class="login_bg" onload="loading();">
+    <header style="height: 70px;vertical-align: middle;">
+    <div>
+   			<img  src="images/logo_school.png">
+   	 		<h2 style="display: inline;" >毕业选题系统 </h2>
+   	 		<h4 class="span_right" id="teacher_lab" ></h4>
+   	 		<a class="return_right" href="index.html">退出</a>
+   	 		
+    </div>
+    </header>
+    <div class="header_line"></div>
+    <div style="background: #AB82FF;height: 600px;">
+    	<section style="background:#FAFAFA;">
+    		
+    		<div id="teacher_manager" style="display: none;" >
+    		<h3 style="margin-top: 10px;text-align: center;">老师信息管理</h3>
+    		<div style="width: 100%;height: 2px;margin-top:10px;background: #EEE0E5"></div>
+    			<table id="teacher_info" border="1" style="width: 80%; margin-left: 10%;text-align: center; margin-top: 10px;" >
+    				<tr>
+    					<td>选择</td>
+    					<td>编号</td>
+    					<td>姓名</td>
+    					<td>学院</td>
+    					<td>专业</td>
+    					<td>手机号</td>
+    					<td>操作</td>
+    				</tr>
+    			</table>
+    			<div style="text-align: center; margin-top: 15px;">
+    				<input type="button" value="批量删除" style="width: 90px;height: 35px;"/>
+    				<input type="button" value="新增用户"  onclick="add_teacher();" style="width: 90px;height: 35px;"/>
+    			</div>
+    		</div>
+    		<div id="student_manager" style="display: none;" >
+    		<h3 style="margin-top: 10px;text-align: center;">学生信息管理</h3>
+    		<div style="width: 100%;height: 2px;margin-top:10px;background: #EEE0E5"></div>
+    			<table id="student_info" border="1" style="width: 80%; margin-left: 10%;text-align: center; margin-top: 10px;" >
+    				<tr>
+    					<td>选择</td>
+    					<td>编号</td>
+    					<td>姓名</td>
+    					<td>学院</td>
+    					<td>专业</td>
+    					<td>班级</td>
+    					<td>手机号</td>
+    					<td>操作</td>
+    				</tr>
+    			</table>
+    			<div style="text-align: center; margin-top: 15px;">
+    				<input type="button" value="批量删除" style="width: 90px;height: 35px;"/>
+    				<input type="button" value="新增用户"  onclick="add_Student();" style="width: 90px;height: 35px;"/>
+    			</div>
+    		</div>
+    		
+    		<div id="add_teacher" style="display: none;">
+    			<h3 style="margin-top: 10px;text-align: center;">老师信息管理</h3>
+    		<div style="width: 100%;height: 2px;margin-top:10px;background: #EEE0E5"></div>
+    			<h3 style="margin-top: 20px;margin-left: 25%">新增用户:</h3>
+    			<table style="margin-left: 35%; ">
+    				<tr>
+    					<td><h3>老师Id:</h3></td>
+    					<td><h3><input class="input_cs" type="text" id="teacherId"/></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>姓&nbsp;&nbsp;名:</h3></td>
+    					<td><h3><input class="input_cs" type="text" id="name"/></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>密&nbsp;&nbsp;码:</h3></td>
+    					<td><h3><input class="input_cs" type="text" id="password"/></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>学&nbsp;&nbsp;院:</h3></td>
+    					<td><h3><select id="institutionSelect" onchange="institutionChange();" style="width: 200px;height: 30px;"></select></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>专&nbsp;&nbsp;业:</h3></td>
+    					<td><h3><select id="majorSelect"style="width: 200px;height: 30px;"></select></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>手机号:</h3></td>
+    					<td><h3><input class="input_cs" type="text" id="phone"/></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3><input type="button" value="提交" style="width: 90px;height: 30px;" onclick="teacher_Stroe();"/></h3></td>
+    					<td><h3><input type="button" value="清除" style="width: 90px;height: 30px;"/></h3></td>
+    				</tr>
+    			</table>
+    		</div>
+    		<div id="add_student" style="display: none;">
+    			<h3 style="margin-top: 10px;text-align: center;">学生信息管理</h3>
+    		<div style="width: 100%;height: 2px;margin-top:10px;background: #EEE0E5"></div>
+    			<h3 style="margin-top: 20px;margin-left: 25%">新增用户:</h3>
+    			<table style="margin-left: 35%; ">
+    				<tr>
+    					<td><h3>学生Id:</h3></td>
+    					<td><h3><input class="input_cs" type="text" id="studentId"/></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>姓&nbsp;&nbsp;名:</h3></td>
+    					<td><h3><input class="input_cs" type="text" id="st_name"/></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>密&nbsp;&nbsp;码:</h3></td>
+    					<td><h3><input class="input_cs" type="text" id="st_password"/></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>学&nbsp;&nbsp;院:</h3></td>
+    					<td><h3><select id="st_institutionSelect" onchange="institutionChange();" style="width: 200px;height: 30px;"></select></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>专&nbsp;&nbsp;业:</h3></td>
+    					<td><h3><select id="st_majorSelect"style="width: 200px;height: 30px;"></select></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>班&nbsp;&nbsp;级:</h3></td>
+    					<td><h3><select id="st_classSelect"style="width: 200px;height: 30px;"></select></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3>手机号:</h3></td>
+    					<td><h3><input class="input_cs" type="text" id="st_tel"/></h3></td>
+    				</tr>
+    				<tr>
+    					<td><h3><input type="button" id="st_send_bt" value="提交" style="width: 90px;height: 30px;" onclick="student_Stroe();"/></h3></td>
+    					<td><h3><input type="button" value="清除" style="width: 90px;height: 30px;"/></h3></td>
+    				</tr>
+    			</table>
+    		</div>
+    	</section>
+    	<aside style="background:#FAFAFA;">
+    		. <h3 style="margin-left: 10px;">选择功能</h3> 
+    		<table style="margin-left: 50px;margin-top: 10px;">
+    			<tr>
+    				<td><input type="button" value="学生管理" style="width: 90px;height: 30px;"  onclick="student_manager();"/></td>
+    				<td><input type="button" value="老师管理" style="width: 90px;height: 30px;"onclick="teacher_manager();"/></td>
+    			</tr>
+    		</table>
+    	</aside>
+    </div>
+  </body>
+</html>

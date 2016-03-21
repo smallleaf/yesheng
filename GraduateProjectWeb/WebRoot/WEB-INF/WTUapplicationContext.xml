@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Spring配置文件的DTD信息 -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!-- Spring 配置文件的根元素是beans -->
+	<!-- 定义数据源，该bean的ID为dataSource -->
+	<bean id="WTUdataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<!-- 指定数据库驱动 -->
+		<property name="driverClass">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<!-- 指定连接数据库的URL -->
+		<property name="jdbcUrl">
+			<value>jdbc:mysql://localhost:3306/graduateproject</value>
+		</property>
+		<property name="user">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value>root</value>
+		</property>
+		<!-- 设置数据库连接池的初始化连接数 --> 
+			<property name="initialPoolSize">
+			<value>5</value>
+		</property>
+		<!-- 设置数据库连接池的最小连接数 -->
+		<property name="minPoolSize">
+			<value>1</value>
+		</property>
+		<!-- 设置数据库连接池的最大连接数 -->
+		<property name="maxPoolSize">
+			<value>20</value>
+		</property>
+		<property name="acquireIncrement">
+			<value>10</value>
+		</property>
+		<!-- 设置数据库连接池的连接的最大空闲时间,单位为秒 --> 
+		<property name="maxIdleTime">
+			<value>600</value>
+		</property>
+	</bean>
+			
+	<!-- 定义hibernate的Factory -->
+	<bean id="WTUsessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- 依赖注入数据源，注入正是上文定义的dataSource -->
+		<property name="dataSource"
+			ref="WTUdataSource">
+		</property>
+		
+		<!-- mappingResources属性用来列出全部映射 -->
+		<property name="mappingResources">
+			<list>
+			<value>com/wtu/graduateproject/po/domain/Student.hbm.xml</value>
+			<value>com/wtu/graduateproject/po/domain/Major.hbm.xml</value>
+			<value>com/wtu/graduateproject/po/domain/Institution.hbm.xml</value>
+			<value>com/wtu/graduateproject/po/domain/Administration.hbm.xml</value>
+			<value>com/wtu/graduateproject/po/domain/Teacher.hbm.xml</value>
+			<value>com/wtu/graduateproject/po/domain/Cource.hbm.xml</value>
+			<value>com/wtu/graduateproject/po/domain/StudentClass.hbm.xml</value>
+			<value>com/wtu/graduateproject/po/domain/ChooseCource.hbm.xml</value>
+			</list>
+		</property>
+		<!-- 定义Hibernate 的SessionFactory的属性 -->
+		
+		<property name="hibernateProperties">
+		<props>
+	
+			<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLInnoDBDialect</prop>
+				<!-- 是否根据需要每次自动创建数据库 -->
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<!-- 显示Hibernate持久化操作所生成的SQL -->
+				<prop key="hibernate.show_sql">true</prop>
+				<!-- 将SQL脚本进行格式化后再输出 -->
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 配置Hibernate的事物管理器 -->
+	
+	<bean id="WTUtransactionManager"
+	class ="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	<property name="sessionFactory">
+	<ref local="WTUsessionFactory"/>
+	</property>
+	</bean>
+	
+  	
+	<bean id="WTUtxProxyTemplate" abstract="true"
+	class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+	<!-- 注入事物管理器 -->
+		<property name="transactionManager" ref="WTUtransactionManager"></property>
+	<!-- 配置事物属性 -->
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="change*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	
+	<!-- 配置具体的业务逻辑层组件的事物代理 -->
+	<bean id="wtufacadeManager" parent="WTUtxProxyTemplate">
+		<property name="target">
+			<bean class="com.wtu.graduateproject.service.impl.FacadeManagerImpl">
+			<property name="studentDao" ref="studentDao"></property>
+			<property name="teacherDao" ref="teacherDao"></property>
+			<property name="administrationDao" ref="administrationDao"></property>
+			<property name="majorDao" ref="majorDao"></property>
+			<property name="institutionDao" ref="institutionDao"></property>
+			<property name="courceDao" ref="courceDao"></property>
+			<property name="studentClassDao" ref="studentClassDao"></property>
+			<property name="chooseCourceDao" ref="chooseCourceDao"></property>
+			</bean>	
+		</property>
+	</bean>
+		
+</beans>

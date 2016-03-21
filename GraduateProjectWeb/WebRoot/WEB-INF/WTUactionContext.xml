@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Spring配置文件的DTD信息 -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- 配置daoTemplate，作为所有DAO组件的模板 -->
+	<bean id="wtuactionTemplate" abstract="true" >
+		<!-- 为DAO组件注入SessionFactory引用 -->
+		<property name="wtumgr" ref="wtufacadeManager"/>
+	</bean>
+	
+	<bean name="StudentAction" class="com.wtu.graduateproject.aciton.StudentAction"
+			 parent="wtuactionTemplate">
+	</bean>
+	<bean name="TeacherAction" class="com.wtu.graduateproject.aciton.TeacherAction"
+			 parent="wtuactionTemplate">
+	</bean>
+	<bean name="AdministrationAction" class="com.wtu.graduateproject.aciton.AdministrationAction"
+			 parent="wtuactionTemplate">
+	</bean>
+</beans>

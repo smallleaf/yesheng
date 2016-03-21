@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+	PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wtu.graduateproject.po.domain">
+	<class name="Student" table="student" dynamic-update="true">
+		<!-- 映射标识属性 -->
+		<id name="studentId" column="studentId" >
+		<!-- 指定主键s生成策略 -->
+		
+		</id>
+		<!-- 映射普通属性 -->
+		
+		<property name="password" column="password" ></property>
+		<property name="tel" column="tel" ></property>
+		<property name="majorId" column="majorId" ></property>
+		<property name="name" column="name" ></property>
+		<property name="classId" column="classId" ></property>
+		<property name="first_volunteer" column="first_volunteer" ></property>
+		<property name="second_volunteer" column="second_volunteer" ></property>
+		</class>
+</hibernate-mapping>

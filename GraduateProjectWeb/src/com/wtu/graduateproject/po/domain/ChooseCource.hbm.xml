@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+	PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wtu.graduateproject.po.domain">
+	<class name="ChooseCource" table="choose_cource" >
+		<!-- 映射标识属性 -->
+		<id name="id" column="id">
+		<!-- 指定主键s生成策略 -->
+		<generator class="identity"></generator>
+		</id>
+		<!-- 映射普通属性 -->
+		<property name="studentId" column="studentId" ></property>
+		<property name="courceId" column="courceId" ></property>
+		<property name="state" column="state" ></property>
+		<property name="volunteerKind" column="volunteerKind" ></property>
+		</class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>毕业选题系统</title>
+	
+    <meta http-equiv="Content-Type" content="text/html;charset=gbk" />
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<link rel="stylesheet" type="text/css" href="CSS/css_bg.css"> 
+	<script type="text/javascript" src="JS/verify.js"></script>
+  </head>
+  
+  <body class="login_bg">
+  
+    	<header class="header_cs" >
+    		<h2 style="white-space: nowrap;"><img src="images/logo_school.png">
+    			毕业选题系统
+    		</h2>
+    	</header>
+    	<div class="login_left">
+    		<img alt="" src="images/login_pic.png">
+    	</div>
+    	<div class="login_right">
+    		<table style="padding-top: 92px;padding-left: 100px;">
+    			<tr id="tr">
+    				<td>用户名：</td>
+    				<td><input  type="text" id="studentId2" name="studentId" ></td>
+    			</tr>
+    			<tr id="tr">
+    				<td>密&nbsp;&nbsp;&nbsp;码：</td>
+    				<td><input  type="password" name="passWord" ></td>
+    			</tr>
+    			<tr id="tr">
+    				<td style="text-align: right;"><label ><input type="radio" name="user_role"  value="1"  checked="checked"/>老师</label></td>
+    				<td style="text-align: left;"><label ><input type="radio" name="user_role" value="0"  />管理员</label></td>
+    			</tr>
+    			<tr id="tr">
+    				<td style="text-align: right;"><input id="input_bt" type="submit" value="登陆"  onclick="valide();"/></td>
+    				<td style="text-align: left;"><input id="input_bt" type="reset" value="重置" /></td>
+    			</tr>
+    			
+    		</table>
+    	</div>
+    	
+  </body>
+</html>

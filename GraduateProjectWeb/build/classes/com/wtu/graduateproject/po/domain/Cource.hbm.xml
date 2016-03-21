@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+	PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wtu.graduateproject.po.domain">
+	<class name="Cource" table="coure">
+		<!-- 映射标识属性 -->
+		<id name="id" column="id">
+		<!-- 指定主键s生成策略 -->
+		<generator class="identity"></generator>
+		</id>
+		<!-- 映射普通属性 -->
+		<property name="name" column="name" ></property>
+		<property name="demand" column="demand" ></property>
+		<property name="ability" column="ability" ></property>
+		<property name="count_limit" column="count_limit" ></property>
+		<property name="teacherId" column="teacherId" ></property>
+		<property name="count_choose" column="count_choose" ></property>
+		</class>
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Spring配置文件的DTD信息 -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- 配置daoTemplate，作为所有DAO组件的模板 -->
+	<bean id="wtudaoTemplate" abstract="true">
+		<!-- 为DAO组件注入SessionFactory引用 -->
+		<property name="sessionFactory" ref="WTUsessionFactory"/>
+	</bean>
+	
+	<bean id="dao"
+		class="com.wtu.graduateproject.dao.hibernate.BaseDaoHibernate"
+		parent="wtudaoTemplate">
+	</bean>
+	
+	<bean id="studentDao"
+		class="com.wtu.graduateproject.dao.hibernate.StudentDaoHibernate" parent="wtudaoTemplate">
+	</bean>
+	<bean id="teacherDao"
+		class="com.wtu.graduateproject.dao.hibernate.TeacherDaoHibernate" parent="wtudaoTemplate">
+	</bean>
+	<bean id="administrationDao"
+		class="com.wtu.graduateproject.dao.hibernate.AdministrationDaoHibernate" parent="wtudaoTemplate">
+	</bean>
+	<bean id="majorDao"
+		class="com.wtu.graduateproject.dao.hibernate.MajorDaoHibernate" parent="wtudaoTemplate">
+	</bean>
+	<bean id="institutionDao"
+		class="com.wtu.graduateproject.dao.hibernate.InstitutionDaoHibernate" parent="wtudaoTemplate">
+	</bean>
+	<bean id="courceDao"
+		class="com.wtu.graduateproject.dao.hibernate.CourceDaoHibernate" parent="wtudaoTemplate">
+	</bean>
+	<bean id="studentClassDao"
+		class="com.wtu.graduateproject.dao.hibernate.StudentClassDaoHibernate" parent="wtudaoTemplate">
+	</bean>
+	<bean id="chooseCourceDao"
+		class="com.wtu.graduateproject.dao.hibernate.ChooseCourceDaoHibernate" parent="wtudaoTemplate">
+	</bean>
+</beans>
