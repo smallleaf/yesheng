@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">高校帮</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main_interface">MainInterfaceActivity</string>
+    <string name="title_activity_channel">ChannelActivity</string>
+    <string name="subscribe_my_category">我的频道</string>
+    <string name="subscribe_manager_category_info_2">单击增删频道，长按拖拽排序</string>
+    <string name="subscribe_more_category">更多频道</string>
+    <string name="drawer_btn_rss">频道管理</string>
+    <string name="drawer_right_tip_no_login">未登录</string>
+    <string name="unloging_state">亲，您还没有登录哦</string>
+    <string name="label_cancel_dislike">撤消</string>
+    <string name="title_activity_common_news">CommonNewsActivity</string>
+    <string name="more_data">更多</string>
+    <string name="load_more">加载更多</string>
+    <string name="left_drawer_no_login_tip">登录后，将推荐给你更多感兴趣的文章</string>
+    <string name="left_drawer_item_search">搜索</string>
+    <string name="left_drawer_item_favorite">收藏</string>
+    <string name="left_drawer_item_message">发布消息</string>
+    <string name="left_drawer_item_offline">离线</string>
+    <string name="left_drawer_item_offline_cancel">取消离线</string>
+    <string name="left_drawer_item_activity">活动</string>
+    <string name="left_drawer_item_setting">设置</string>
+    <string name="left_drawer_item_feedback">反馈</string>
+    <string name="left_drawer_item_appstore">精彩应用</string>
+    <string name="retry_large_image"><u>加载失败，点击重试</u></string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_person_inrformation">PersonInrformationActivity</string>
+    <string name="title_activity_university">UniversityActivity</string>
+    <string name="title_activity_information_major">InformationMajorActivity</string>
+    <string name="title_activity_job">JobActivity</string>
+    <string name="title_activity_associatition">AssociatitionActivity</string>
+    <string name="title_activity_hobby">HobbyActivity</string>
+    <string name="title_activity_public_message">PublicMessageActivity</string>
+    <string name="title_activity_public_person_info">PublicPersonInfoActivity</string>
+    <string name="title_activity_detais_news">DetaisNewsActivity</string>
+    <string name="title_activity_reply">ReplyActivity</string>
+    <string name="title_activity_details_web">DetailsWebActivity</string>
+    <string name="title_activity_image_show">ImageShowActivity</string>
+    <string name="title_activity_univerisity_choose">UniverisityChooseActivity</string>
+
+</resources>

@@ -1,0 +1,89 @@
+package com.wtu.university.adpter;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import com.example.universityconnection.R;
+import com.wtu.university.bean.NewsEntity;
+
+import android.R.raw;
+import android.content.Context;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class NewsAdapter extends BaseAdapter{
+	private LayoutInflater inflater;
+	private List<NewsEntity> list;
+	private Context mContext;
+	private Date d;
+	private SimpleDateFormat sdf;
+	
+	public NewsAdapter(Context context,List<NewsEntity> list){
+		inflater = LayoutInflater.from(context);
+		this.list = list;
+		this.mContext=context;
+		this.sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+	}
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return list.size();
+	}
+
+	@Override
+	public NewsEntity getItem(int arg0) {
+		// TODO Auto-generated method stub
+		return list.get(arg0);
+	}
+
+	@Override
+	public long getItemId(int arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		ViewHolder holder=null;
+		if(convertView==null){
+			holder = new ViewHolder();
+			convertView = inflater.inflate(R.layout.news_list,
+					parent, false);
+			
+			holder.title = (TextView) convertView.findViewById(R.id.item_title);
+			holder.unversity = (TextView) convertView.findViewById(R.id.news_university);
+			holder.commentCounts = (TextView) convertView.findViewById(R.id.comment_count);
+			holder.publicTime = (TextView) convertView.findViewById(R.id.publish_time);
+			holder.pictureRight=(ImageView)convertView.findViewById(R.id.right_image);
+		} else {
+			holder = (ViewHolder) convertView.getTag();
+		}
+		
+		holder.title.setText(list.get(position).getTitle());
+		holder.unversity.setText(list.get(position).getColleage());
+		holder.commentCounts.setText("评论 "+list.get(position).getCommentCounts());
+		Date date=new Date(list.get(position).getPulishTime());
+		holder.publicTime.setText(sdf.format(date));
+		holder.pictureRight.setBackgroundResource(R.drawable.app);
+		return convertView;
+	}
+	
+	public final class ViewHolder {
+		public TextView title;
+		public TextView unversity;
+		public TextView commentCounts;
+		public TextView publicTime;
+		public ImageView pictureRight;
+		public ImageView picture2;
+		public ImageView picture3;
+	}
+
+}

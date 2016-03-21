@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    
+    
+    <com.wtu.university.view.RefreshSupportListView
+        android:id="@+id/news_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:cacheColorHint="#000000"
+        android:dividerHeight="1dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:scrollingCache="false"
+        android:visibility="gone" >
+    </com.wtu.university.view.RefreshSupportListView>
+
+    
+
+</LinearLayout>

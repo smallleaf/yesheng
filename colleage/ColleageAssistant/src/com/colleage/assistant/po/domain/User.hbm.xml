@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+	PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.colleage.assistant.po.domain">
+	<class name="User" table="user">
+		<!-- 映射标识属性 -->
+		<id name="username" column="username">
+		<!-- 指定主键s生成策略 -->
+		</id>
+		<!-- 映射普通属性 -->
+		<property name="password" column="password" not-null="true"></property>
+		<property name="picture" column="picture" ></property>
+		<property name="university" column="university"></property>
+		<property name="major" column="major" ></property>
+		<property name="job" column="job" ></property>
+		<property name="address" column="address" ></property>
+		<property name="hobby1" column="hobby1" ></property>
+		<property name="hobby2" column="hobby2" ></property>
+		<property name="hobby3" column="hobby3" ></property>
+		<property name="associatition" column="associatition" ></property>
+		</class>
+</hibernate-mapping>

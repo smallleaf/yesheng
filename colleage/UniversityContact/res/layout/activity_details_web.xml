@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+<include 
+	    android:id="@+id/details_news_web_title"
+	    layout="@layout/title_bar"
+	    />
+ <ScrollView 
+     android:id="@+id/scrollView"
+     android:layout_below="@+id/details_news_web_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearlayout"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars=""
+            android:orientation="vertical" >
+            
+             <WebView 
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+             <com.wtu.university.view.ReplyListView
+                 android:id="@+id/web_listview"
+                 android:layout_width="match_parent"
+                  android:divider="@android:color/transparent"
+        		android:dividerHeight="0dp"
+        		android:fadingEdge="none"
+                 android:layout_height="wrap_content" >
+             </com.wtu.university.view.ReplyListView>
+        </LinearLayout>
+       
+    </ScrollView>
+   
+ <LinearLayout 
+	    android:id="@+id/linearlayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal"
+	     android:layout_alignParentBottom="true"
+	     android:background="@drawable/shape_all_corner"
+	     android:padding="5dp"
+	    ><EditText 
+	    android:id="@+id/web_details_answer_publicPeople"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/shape_all_corner"
+	    android:hint="发表评论"
+	    android:layout_weight="0.3"
+	    />
+	    <Button 
+	        android:id="@+id/web_details_news_sendBtu"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/login_click"
+	        android:text="发送"
+	        android:layout_weight="1"
+	        android:visibility="gone"
+	        />
+	
+	</LinearLayout>
+	
+</RelativeLayout>

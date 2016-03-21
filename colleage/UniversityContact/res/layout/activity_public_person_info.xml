@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/public_person_message"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="22dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_all_corner"
+      	 >
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:padding="12dp" >
+
+                <ImageView
+                    android:id="@+id/public_person_info_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/app" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                
+                android:text="头像"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+            <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_all_corner"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所在地"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+             <TextView 
+                 android:id="@+id/public_person_info_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="所在地"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+        </RelativeLayout>
+            <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_all_corner"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大学"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+             <TextView 
+                 android:id="@+id/public_person_info_colleage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="大学"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+        </RelativeLayout>
+            <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_all_corner"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="职业"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+             <TextView 
+                 android:id="@+id/public_person_info_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="职业"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+        </RelativeLayout>
+            <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_all_corner"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="专业"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+             <TextView 
+                 android:id="@+id/public_person_info_major"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="专业"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+        </RelativeLayout>
+            <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/shape_all_corner"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="兴趣"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+             <TextView 
+                 android:id="@+id/public_person_info_hobby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="专业"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+        </RelativeLayout>
+            <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_all_corner"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="社团"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+             <TextView 
+                 android:id="@+id/public_person_info_association"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="专业"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+                />
+        </RelativeLayout>
+        
+            
+           <Button 
+               android:id="@+id/public_person_info_add_friend"
+               android:layout_width="match_parent"
+               android:layout_marginTop="10dp"
+               android:layout_height="30dp"
+               android:text="加好友"
+               android:background="@drawable/login_click"
+               />
+    </LinearLayout>
+    
+    
+</LinearLayout>

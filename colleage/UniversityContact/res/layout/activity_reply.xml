@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/details_user_parent"
+    android:background="@color/white"
+     >
+    
+    <include 
+	    android:id="@+id/reply_news_title"
+	    layout="@layout/title_bar"
+	    />
+    <RelativeLayout 
+        android:id="@+id/linearlaout_1"
+        android:layout_below="@+id/reply_news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       
+        >
+        <ImageView 
+	    android:id="@+id/reply_details_user_news_list_picture"
+	    android:layout_width="50dp"
+	    android:layout_height="50dp"
+	     android:layout_marginTop="8dp"
+	     android:layout_marginLeft="8dp"
+	    android:src="@drawable/app"
+	    />
+        <LinearLayout 
+         	android:id="@+id/linearlaout_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/reply_details_user_news_list_picture"
+            android:layout_toRightOf="@+id/reply_details_user_news_list_picture"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            >
+            <TextView 
+                android:id="@+id/reply_details_user_news_list_name"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textSize="18sp"
+                style="@style/item_title"
+                android:text="续写青春"
+                />
+            <TextView 
+                android:id="@+id/reply_details_user_news_list_time"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textSize="14sp"
+                style="@style/item_secondary_text"
+                android:text="第一楼  2015-04-05"
+                />
+        </LinearLayout>
+         <TextView
+            android:id="@+id/reply_details_user_news_list_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlaout_2"
+            android:layout_marginTop="5dp"
+            android:text="你说这是不是很难啊"
+            android:layout_marginLeft="20dp"
+            style="@style/item_title"
+            android:textSize="18sp" />
+         
+            <View
+        android:id="@+id/title_bar_divider"
+        android:layout_width="fill_parent"
+         android:layout_marginTop="10dp"
+        android:layout_height="0.5dip"
+        android:layout_alignLeft="@+id/reply_details_user_news_list_content"
+        android:layout_below="@+id/reply_details_user_news_list_content"
+        android:background="@color/detail_divider_day" />
+            <ListView 
+                android:id="@+id/reply_details_user_news_list_comments"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                 android:layout_marginTop="5dp"
+                 android:divider="#00000000"
+                 android:focusable="false"
+                 android:focusableInTouchMode="true" 
+                 android:layout_alignLeft="@id/reply_details_user_news_list_content"
+                 android:layout_below="@+id/title_bar_divider"
+                ></ListView>
+    </RelativeLayout>
+
+       <LinearLayout 
+	    android:id="@+id/linearlayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal"
+	     android:layout_alignParentBottom="true"
+	     android:background="@drawable/shape_all_corner"
+	     android:padding="5dp"
+	    ><EditText 
+	    android:id="@+id/reply_details_answer_publicPeople"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/shape_all_corner"
+	    android:hint="回复楼主"
+	    android:layout_weight="0.3"
+	    />
+	    <Button 
+	        android:id="@+id/reply_details_news_sendBtu"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/login_click"
+	        android:text="发送"
+	        android:layout_weight="1"
+	        android:visibility="gone"
+	        />
+	
+	</LinearLayout>
+	
+</RelativeLayout>

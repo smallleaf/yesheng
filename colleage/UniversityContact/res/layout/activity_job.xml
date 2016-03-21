@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/university_child_bg"
+    android:orientation="vertical">
+	<include 
+	    android:id="@+id/title_person_job"
+	    layout="@layout/title_bar"
+	    />
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="200dp"
+	    android:padding="20dp"
+	    android:orientation="horizontal"
+	    >
+	    <EditText 
+	    android:id="@+id/job_input"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/shape_all_corner"
+	    android:textSize="20sp"
+	    android:maxLength="15"
+	    android:hint="请输入职业"
+	    />
+	    
+	</LinearLayout>
+	
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+	PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.colleage.assistant.po.domain">
+	<class name="ReplyComment" table="comment_reply_table">
+		<!-- 映射标识属性 -->
+		<id name="id" column="id">
+		<!-- 指定主键s生成策略 -->
+		<generator class="identity" />
+		</id>
+		<!-- 映射普通属性 -->
+		<property name="username" column="username" not-null="true"></property>
+		<property name="content" column="content" not-null="true"></property>
+		<property name="reply_username" column="reply_username" not-null="true"></property>
+		<property name="comment_id" column="comment_id" not-null="true"></property>
+		<property name="reply_time" column="reply_time" not-null="true"></property>
+		</class>
+</hibernate-mapping>

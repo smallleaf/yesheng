@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+	PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.colleage.assistant.po.domain">
+	<class name="NewsKind" table="news_Kind">
+		<!-- 映射标识属性 -->
+		<id name="id" column="id">
+		<!-- 指定主键s生成策略 -->
+		</id>
+		<!-- 映射普通属性 -->
+		<property name="name" column="name" not-null="true"></property>
+		</class>
+</hibernate-mapping>

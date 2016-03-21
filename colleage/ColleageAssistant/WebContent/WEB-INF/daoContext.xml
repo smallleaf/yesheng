@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Spring配置文件的DTD信息 -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- 配置daoTemplate，作为所有DAO组件的模板 -->
+	<bean id="daoTemplate" abstract="true">
+		<!-- 为DAO组件注入SessionFactory引用 -->
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="dao"
+		class="com.colleage.assistant.dao.hibernate.BaseDaoHibernate"
+		parent="daoTemplate">
+	</bean>
+	<bean id="userDao"
+		class="com.colleage.assistant.dao.hibernate.UserDaoHibernate" parent="daoTemplate">
+	</bean>
+	<bean id="newsHotDao"
+		class="com.colleage.assistant.dao.hibernate.NewsHotDaoHibernate" parent="daoTemplate">
+	</bean>
+	<bean id="newsKindDao"
+		class="com.colleage.assistant.dao.hibernate.NewsKindDaoHibernate" parent="daoTemplate">
+	</bean>
+	<bean id="userPublicNewsDao"
+		class="com.colleage.assistant.dao.hibernate.UserPublicNewsDaoHibernate" parent="daoTemplate">
+	</bean>
+	<bean id="publicCommentDao"
+		class="com.colleage.assistant.dao.hibernate.PublicCommentDaoHibernate" parent="daoTemplate">
+	</bean>
+	<bean id="replyCommentDao"
+		class="com.colleage.assistant.dao.hibernate.ReplyCommentDaoHibernate" parent="daoTemplate">
+	</bean>
+</beans>

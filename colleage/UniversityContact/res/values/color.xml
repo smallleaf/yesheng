@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="pink">#fdf9eb</color>
+    <color name="yellow">#fe6600</color>
+    <color name="red">#f40707</color>
+    <color name="blue">#0000FF</color>
+    <color name="gray_text">#8e8e8e</color>
+    <color name="detail_divider_day">#ffb4b4b4</color>
+    <color name="default_text">#ff454545</color>
+    <color name="settler_center_title_bar_bg">#454545</color>
+    <color name="drawer_divider">#ff303030</color>
+    <color name="login_button_unpress">#DDA0DD</color>
+    <color name="login_button_press">#DCDCDC</color>
+    <color name="bantouming">#e0000000</color>
+    <color name="university_title">#9400D3</color>
+    <color name="dislike_line_color">#ff252525</color>
+    <color name="reply_username">#9B30FF</color>
+    <color name="bg_full_image">#ff000000</color>
+    <!-- 深红 -->
+    <color name="deepred">#cc0000</color>
+    <color name="settlement_center_bg">#e2e2e2</color>
+    <color name="button_red_back">#dd0a21</color>
+     <!-- 深绿褐色 -->
+    <color name="slateblue">#6A5ACD</color>
+    <color name="gray">#D6D6D6</color>
+    <!-- 灰色字体 -->
+    <color name="grayText">#909090</color>
+    <color name="login_state">#4F4F4F</color>
+    <color name="dislike_bg_normal">#ff3e3e3e</color>
+    <color name="dislike_bg_pressed">#ff2b2b2b</color>
+    
+  <drawable name="university_child_bg">#F0F0F0</drawable>
+  <drawable name="university_title">#8470FF</drawable>
+  <drawable name="black">#000000</drawable>
+  <drawable name="darkgray">#808080</drawable>
+  <drawable name="white">#FFFFFF</drawable>
+  <drawable name="blue">#0000FF</drawable>
+  <color name="drawer_text">#ffc3c3c3</color>
+  <color name="toumin">#e00000</color>
+  
+  
+   <!-- ptr  -->
+    <color name="ptr_transparent">#00000000</color>
+    <color name="textcolorOrange">#ffae00</color>
+    <color name="textcolorLiteBule">#36a5c1</color>
+    <color name="textcolorBule">#1562a6</color>
+    
+    <color name="chatbackground">#f3f1da</color>
+    
+    <color name="transparent_background">#00000000</color>
+    
+    
+    <color name="title_text_color">#ffffffff</color>
+    
+    
+    <color name="activity_bg_color">#fff5f5f5</color>
+    
+    <!-- 注册背景图片 -->
+    <color name="register_bg_color">#E0FFFF</color>
+    <!-- 頻道管理 -->
+    <color name="subscribe_activity_bg">#ffefefef</color>
+    <color name="subscribe_bg">#fff5f5f5</color>
+    <color name="subscribe_tip_text">#ff2e2e2e</color>
+    <color name="subscribe_seperate_line">#ffcdcdcd</color>
+     <color name="subscribe_item_drag_stroke">#ffd2d2d2</color>
+    <color name="subscribe_item_drag_bg">#fff5f5f5</color>
+     <color name="subscribe_item_selected_bg">#ffffffff</color>
+    <color name="subscribe_item_selected_stroke">#ffcc3131</color>
+     <color name="subscribe_item_disabled_bg">#ffefefef</color>
+    <color name="subscribe_item_disabled_stroke">#ffd9d9d9</color>
+     <color name="subscribe_item_pressed_bg">#fff9f9f9</color>
+    <color name="subscribe_item_pressed_stroke">#ffcdcdcd</color>
+        <color name="subscribe_item_normal_bg">#fff5f5f5</color>
+    <color name="subscribe_item_normal_stroke">#ffcdcdcd</color>
+    <item name="subscribe_item_text_color_normal" type="color">@color/default_text</item>
+
+    <color name="subscribe_item_text_color_pressed">#ffb9b9b9</color>
+    
+    
+    
+    
+    <color name="left_drawer_item_bg_normal">#ff393939</color>
+    <color name="list_notify_text">#ffffffff</color>
+    
+       <color name="notify_view_divider">#66ffffff</color>
+    <color name="notify_view_divider_night">#99b1b1b1</color>
+    
+    <color name="divider_day">#ffdddddd</color>
+    
+    <color name="image_loading_bg">#ffefefef</color>
+    <color name="image_loading_bg_night">#ff2b2b2b</color>
+    
+    
+    <color name="item_title_normal">#ff444444</color>
+    <color name="ss_comment_time">#ff999999</color>
+    <color name="item_local">#ffffffff</color>
+     <color name="item_title_disabled">#ff888888</color>
+     
+      <color name="left_drawer_no_login_tip_text">#ffb8b8b8</color>
+    <color name="left_drawer_user_name">#ffd4d4d4</color>
+    <color name="left_drawer_item_text_normal">#ffd4d4d4</color>
+    <color name="left_drawer_item_text_pressed">#ff4e4e4e</color>
+    <color name="left_drawer_item_text_tip">#fffe3232</color>
+    <color name="left_drawer_item_bg_normal">#ff393939</color>
+    <color name="left_drawer_item_bg_pressed">#ff292929</color>
+    <color name="left_drawer_item_line">#ff272727</color>
+    <color name="left_drawer_offline_line">#ff4bbff6</color>
+    <color name="left_drawer_offline_hint">#ff6699cc</color>
+    <color name="left_drawer_night_mode_text">#ffb8b8b8</color>
+    
+    
+    
+    <color name="login_succes_picture_bg">#96CDCD</color>
+    
+</resources>

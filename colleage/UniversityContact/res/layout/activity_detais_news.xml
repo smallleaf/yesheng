@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+   >
+
+	<include 
+	    android:id="@+id/details_news_title"
+	    layout="@layout/title_bar"
+	    />
+	<com.wtu.university.view.RefreshSupportListView
+        android:id="@+id/details_ListView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/details_news_title"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:layout_above="@+id/linearlayout"
+        />
+	
+	<LinearLayout 
+	    android:id="@+id/linearlayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal"
+	     android:layout_alignParentBottom="true"
+	     android:background="@drawable/shape_all_corner"
+	     android:padding="5dp"
+	    ><EditText 
+	    android:id="@+id/details_answer_publicPeople"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/shape_all_corner"
+	    android:hint="回复楼主"
+	    android:layout_weight="0.3"
+	    />
+	    <Button 
+	        android:id="@+id/details_news_sendBtu"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/login_click"
+	        android:text="发送"
+	        android:layout_weight="1"
+	        android:visibility="gone"
+	        />
+	
+	</LinearLayout>
+	
+</RelativeLayout>

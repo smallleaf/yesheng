@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_transparent">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/job_input_lin"
+        android:orientation="horizontal"
+        >
+        <Button 
+            android:id="@+id/job_input_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="取消"
+            android:background="@drawable/login_click"
+            android:layout_weight="1"
+            />
+        <Button 
+            android:id="@+id/job_input_confin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="确定"
+            android:background="@drawable/login_click"
+            android:layout_weight="1"
+            />
+        
+    </LinearLayout>
+    
+	<LinearLayout 
+	    android:id="@+id/job_input_lin"
+	    android:layout_width="match_parent"
+	    android:layout_height="150dp"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true"
+	    android:background="#ffffff"
+	    >
+	    <EditText 
+	        android:id="@+id/job_input_popwindow"
+	       android:layout_width="match_parent"
+	       android:layout_height="match_parent"
+	        android:textSize="20sp"
+	    	android:maxLength="15"
+	    	android:hint="请输入职业"
+	    	android:background="@drawable/shape_all_corner"
+	        />
+	    
+	</LinearLayout>
+</RelativeLayout>

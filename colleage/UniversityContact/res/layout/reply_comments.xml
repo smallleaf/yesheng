@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+   	>
+   	<RelativeLayout 
+   	    android:id="@+id/reply_relate_item"
+   	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+   	    >
+   	    
+   	    <com.wtu.university.view.TextViewFixTouchConsume 
+	    android:id="@+id/reply_content"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="5dp"
+	    android:text="续写青春： 回复 杨格 ：你是个逗比"
+	    android:textSize="16sp"
+	    />
+   	</RelativeLayout>
+   	  
+	
+	
+	
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8"/>
+  <constant name="struts.objectFactory" value="spring" />
+   <constant name="struts.multipart.maxSize" value="20971520"/> 
+   
+  <package name="json" extends="json-default"> <!--需要将struts-default改为json-default-->
+      <!-- setting action -->
+      
+      <action name="registerAction" class="RegisterAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="loginAction" class="LoginAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="updateUserAction" class="ChangeUserInfoAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="getUserInfoAction" class="GetUserInfoAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="getNewsHotAction" class="GetNewsHotAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="getNewsKindAction" class="GetNewsKindAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="saveUserPublicNewsAction" class="SaveUserPublicNewsAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="praiseDianAction" class="PraiseDianAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="savePublicCommentAction" class="SavePublicCommentAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="getPublicCommentAction" class="GetPublicCommentAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="saveReplyCommentAction" class="SaveReplyCommentAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+      <action name="getReplyCommentAction" class="GetReplyCommentAction" >
+      		<result type="json"></result>  <!--返回值类型设置为json,不设置返回页面--> 
+      </action>        
+     </package> 
+</struts>
+

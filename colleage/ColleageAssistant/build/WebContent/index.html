@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+	浏览图片:<input id="images" type="file" multip accept="image/*"/>
+	<input type="button" value="显示文件" onclick="showDetails();"/>
+	<script type="text/javascript" >
+	var showDetails=function()
+	{
+		var imageFile=document.getElementById("images");
+		var filelist=imageFile.files;
+		for(var i=0;i<filelist.length;i++)
+		{
+			var file=filelist[i];
+			div=doucument.createElement("div");
+			div.innerHTML="第"+(i+1)+"个文件的文件名是:"+file.name
+				+",该文件类型是："+file.type
+				+",该文件大小为："+file.size;
+			document.body.appendChild(div);
+		}
+	}
+	
+	</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Spring配置文件的DTD信息 -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- 配置daoTemplate，作为所有DAO组件的模板 -->
+	<bean id="actionTemplate" abstract="true" >
+		<!-- 为DAO组件注入SessionFactory引用 -->
+		<property name="mgr" ref="facadeManager"/>
+	</bean>
+		
+	<bean name="RegisterAction" class="com.colleage.assistant.action.RegisterAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="LoginAction" class="com.colleage.assistant.action.LoginAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="ChangeUserInfoAction" class="com.colleage.assistant.action.ChangeUserInfoAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="GetUserInfoAction" class="com.colleage.assistant.action.GetUserInfoAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="GetNewsHotAction" class="com.colleage.assistant.action.GetNewsHotAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="GetNewsKindAction" class="com.colleage.assistant.action.GetNewsKindAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="SaveUserPublicNewsAction" class="com.colleage.assistant.action.SaveUserPublicNewsAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="PraiseDianAction" class="com.colleage.assistant.action.PraiseDianAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="SavePublicCommentAction" class="com.colleage.assistant.action.SavePublicCommentAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="SaveReplyCommentAction" class="com.colleage.assistant.action.SaveReplyCommentAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="GetPublicCommentAction" class="com.colleage.assistant.action.GetPublicCommentAction"
+			parent="actionTemplate">
+	</bean>
+	<bean name="GetReplyCommentAction" class="com.colleage.assistant.action.GetReplyCommentAction"
+			parent="actionTemplate">
+	</bean>
+</beans>

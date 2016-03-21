@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+	<include 
+	    android:id="@+id/title_university"
+	    layout="@layout/university_title_bar"
+	    />
+	
+   <ExpandableListView android:id="@+id/Bookbox_explistview" 
+                       android:layout_marginTop="5dp" 
+                       android:layout_width="fill_parent"
+    		           android:layout_height="wrap_content" 
+    		           android:cacheColorHint="#FFFFFFFF"  
+    		           android:drawSelectorOnTop="false"
+    		           android:fastScrollEnabled="true" 
+    		           />
+</LinearLayout>

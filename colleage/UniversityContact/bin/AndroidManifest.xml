@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.universityconnection"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="18" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.wtu.university.app.AppApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.wtu.university.AppLoadingActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wtu.university.MainInterfaceActivity"
+            android:label="@string/title_activity_main_interface" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.ChannelActivity"
+            android:label="@string/title_activity_channel" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.commonNews.CommonNewsActivity"
+            android:label="@string/title_activity_common_news" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.right.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.right.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.PersonInrformationActivity"
+            android:label="@string/title_activity_person_inrformation" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.right.PersonInrformationActivity"
+            android:label="@string/title_activity_information_major" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.right.information.UniversityActivity"
+            android:label="@string/title_activity_information_major" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.left.PublicMessageActivity"
+            android:label="@string/title_activity_public_message" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.right.information.InformationMajorActivity"
+            android:label="@string/title_activity_public_message" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.right.information.HobbyActivity"
+            android:label="@string/title_activity_public_message" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.PublicPersonInfoActivity"
+            android:label="@string/title_activity_public_person_info" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.DetaisNewsActivity"
+            android:label="@string/title_activity_detais_news"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.ReplyActivity"
+            android:label="@string/title_activity_reply" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.DetailsWebActivity"
+            android:label="@string/title_activity_details_web"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.ImageShowActivity"
+            android:label="@string/title_activity_image_show" >
+        </activity>
+        <activity
+            android:name="com.wtu.university.slidingMenu.university.UniverisityChooseActivity"
+            android:label="@string/title_activity_univerisity_choose" >
+        </activity>
+    </application>
+
+</manifest>

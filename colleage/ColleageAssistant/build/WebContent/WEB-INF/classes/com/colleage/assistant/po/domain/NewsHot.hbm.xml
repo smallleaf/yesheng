@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+	PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.colleage.assistant.po.domain">
+	<class name="NewsHot" table="hot_news">
+		<!-- 映射标识属性 -->
+		<id name="id" column="id">
+		<!-- 指定主键s生成策略 -->
+		<generator class="identity" />
+		</id>
+		<!-- 映射普通属性 -->
+		<property name="title" column="title" ></property>
+		<property name="colleage" column="colleage" ></property>
+		<property name="publicTime" column="publicTime" ></property>
+		<property name="rightpicture" column="rightpicture" ></property>
+		<property name="picture1" column="picture1" ></property>
+		<property name="picture2" column="picture2" ></property>
+		<property name="picture3" column="picture3" ></property>
+		<property name="commentCounts" column="commentCounts" ></property>
+		<property name="newsKindId" column="news_id" ></property>
+		<property name="public_user_kind" column="public_user_kind" ></property>
+		<property name="content" column="content" ></property>
+		<property name="news_web" column="news_web" ></property>
+		</class>
+</hibernate-mapping>
