@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_activities_bg"
+   >
+	<include layout="@layout/common_tobar"
+	    android:id="@+id/layout_1"
+	    />
+	 <LinearLayout 
+	    android:id="@+id/details_merchant_ll_kind"
+	    android:layout_width="match_parent"
+	    android:layout_below="@+id/layout_1"
+	    android:layout_height="40dp"
+	    android:orientation="horizontal"
+	    android:showDividers="middle"
+	    >
+
+	        <TextView
+	            android:id="@+id/activity_cource_state_tv_verify"
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:drawablePadding="-20dp"
+	            android:text="正在审核" />
+	    
+	    <TextView
+	        android:id="@+id/activity_cource_state_tv_frist_verify"
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="第一志愿" />
+	    
+	    <TextView
+	        android:id="@+id/activity_cource_state_tv_second_verify"
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="第二志愿" />
+	    
+	    <TextView
+	        android:id="@+id/activity_cource_state_tv_verify_success"
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="审核通过" />
+	</LinearLayout>
+	
+	     <ListView 
+        android:id="@+id/activity_cource_state_lv_courceItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/low_white"
+        android:layout_above="@+id/layout2"
+        android:layout_below="@+id/details_merchant_ll_kind"
+        ></ListView>
+		<include 
+	    layout="@layout/common_loading"
+	    android:layout_below="@+id/layout_1"
+	    />
+		
+			<LinearLayout
+	    android:id="@+id/layout2"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="@color/low2"
+	    android:orientation="horizontal"
+	    android:padding="5dp"
+	    >
+	    <Button 
+	        android:id="@+id/activity_cource_success"
+	        android:layout_width="match_parent"
+	        android:layout_weight="1"
+	        android:background="@drawable/bluebutton_click"
+	        android:layout_marginRight="10dp"
+	        android:layout_height="match_parent"
+	        android:text="审核通过"
+	        />
+	    <Button 
+	        android:id="@+id/activity_cource_fair"
+	        android:layout_weight="1"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginLeft="10dp"
+	        android:background="@drawable/bluebutton_click"
+	        android:text="审核失败"
+	        />
+	</LinearLayout>
+</RelativeLayout>

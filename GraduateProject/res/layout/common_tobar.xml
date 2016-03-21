@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/low2"
+     >
+  
+	<TextView 
+	    android:id="@+id/common_tv_back"
+	    style="@style/back_view"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:onClick="doBack"
+	    />
+	<LinearLayout 
+	    android:id="@+id/common_ll_search"
+	    android:layout_width="55dp"
+	    android:layout_height="45dp"
+	    android:background="@drawable/search_click"
+	     android:layout_alignParentRight="true"
+	     android:clickable="true"
+	     android:visibility="gone"
+	     android:gravity="center"
+	    >
+	    <ImageView 
+	    android:id="@+id/common_iv_search"
+	    android:layout_width="35dp"
+	    android:layout_height="35dp"
+	    android:src="@drawable/search"
+	    />
+	</LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/common_tv_right"
+	    android:layout_width="55dp"
+	    android:layout_height="45dp"
+	    android:background="@drawable/search_click"
+	     android:layout_alignParentRight="true"
+	     android:clickable="true"
+	     android:visibility="gone"
+	     android:gravity="center"
+	    >
+	    <TextView 
+	         android:layout_width="35dp"
+	   		 android:layout_height="35dp"
+	   		 android:text="确定"
+	   		 android:gravity="center"
+	   		 android:textSize="16sp"
+	        />
+	</LinearLayout>
+	
+</RelativeLayout>

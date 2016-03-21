@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.graduateproject"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:name="com.example.graduate.activity.common.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.graduate.activity.common.StartActivity"
+            android:label="毕业设计选题系统" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.graduate.activity.common.LoginActivity" >
+        </activity>
+        <activity android:name="com.example.graduate.student.activity.TeacherActivity" >
+        </activity>
+        <activity android:name="com.example.graduate.student.activity.ShowSubject" >
+        </activity>
+        <activity
+            android:name="com.example.graduate.activity.common.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.example.graduate.student.activity.InstitutionActivity"
+            android:label="@string/title_activity_institution" >
+        </activity>
+        <activity
+            android:name="org.androidpn.client.NotificationDetailsActivity"
+            android:label="Notification Details" >
+        </activity>
+        <activity
+            android:name="org.androidpn.client.NotificationSettingsActivity"
+            android:label="Notification Settings" >
+        </activity>
+
+        <service
+            android:name="org.androidpn.client.NotificationService"
+            android:enabled="true"
+            android:label="NotificationService" >
+            <intent-filter>
+                <action android:name="org.androidpn.client.NotificationService" />
+            </intent-filter>
+        </service>
+        <!--
+			<meta-data android:name="ANDROIDPN_API_KEY"
+			android:value="1234567890" />
+        -->
+        <activity
+            android:name="com.example.graduate.student.activity.CourceActivity"
+            android:label="@string/title_activity_cource" >
+        </activity>
+        <activity
+            android:name="com.example.graduate.student.activity.DetailCourceActivity"
+            android:label="@string/title_activity_detail_cource" >
+        </activity>
+        <activity
+            android:name="com.example.graduate.student.activity.DetailTeacherActivity"
+            android:label="@string/title_activity_detail_teacher" >
+        </activity>
+        <activity
+            android:name="com.example.graduate.student.activity.SystemActivity"
+            android:label="@string/title_activity_system" >
+        </activity>
+        <activity
+            android:name="com.example.graduate.student.activity.StudentInfoActivity"
+            android:label="@string/title_activity_student_info"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.example.graduate.teacher.activity.TeacherCourceActivity"
+            android:label="@string/title_activity_teacher_cource" >
+        </activity>
+        <activity
+            android:name="com.example.graduate.teacher.activity.CourceStateActivity"
+            android:label="@string/title_activity_cource_state" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+</manifest>

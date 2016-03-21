@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+	<include layout="@layout/common_tobar"
+	    android:id="@+id/layout1"
+	    />
+
+    <ListView 
+        android:id="@+id/activity_cource_lv_courceItem"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layout1"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout2"
+        android:background="@color/low_white"
+        ></ListView>
+		<include 
+	    layout="@layout/common_loading"
+	    android:layout_below="@+id/layout1"
+	    />
+
+</RelativeLayout>

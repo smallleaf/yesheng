@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_blue">#D1EEEE</color>
+     <color name="deep_blue">#1196EE</color>
+     <color name="low">#E0FFFF</color>
+     <color name="gray2">#EEEEE0</color>
+     
+     <color name="low2">#76EEC6</color>
+     <color name="white">#FFFFFF</color>
+     <color name="gray">#D1EEEE</color>
+     <color name="green">#39DE10</color>
+     <color name="low_white">#FCFCFC</color>
+     <color name="low_black">#919191</color>
+     <color name="low_black2">#8B8989</color>
+     <color name="cource_text">#E0FFFF</color>
+     
+     <color name="title_red">#FA8072</color>
+</resources>

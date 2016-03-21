@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+      <include layout="@layout/common_tobar"/>
+	     <Button 
+          android:id="@+id/activity_system_bt_login_out"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/activity_system_bt_exit"
+          android:layout_marginBottom="2dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:text="注销"
+          android:background="@drawable/bluebutton_click"/>
+	     <Button 
+          android:id="@+id/activity_system_bt_exit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="20dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:text="退出"
+          android:background="@drawable/bluebutton_click"/>
+</RelativeLayout>
