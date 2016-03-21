@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.marketapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <application
+        android:name="com.shop.marketapp.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.shop.marketapp.activity.AppLoadingActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.IndexTableHostActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.MainActivity"
+            android:label="@string/title_activity_main2" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.BuyCarActivity"
+            android:label="@string/title_activity_buy_car" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.CollectionActivity"
+            android:label="@string/title_activity_collection" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.PersonalActivity"
+            android:label="@string/title_activity_personal" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.DetailsMerchantActivity"
+            android:label="@string/title_activity_details_merchant" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name="com.shop.marketapp.activity.DeliveryAddressActivity"
+            android:label="@string/title_activity_delivery_address" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.activity.AdressAddActivity"
+            android:label="@string/title_activity_adress_add" >
+        </activity>
+        <activity
+            android:name="com.shop.marketapp.person.ui.PersonDetailsActivity"
+            android:label="@string/title_activity_person_details" >
+        </activity>
+        <activity
+            android:name="com.example.marketapp.AllOrderActivity"
+            android:label="@string/title_activity_all_order" >
+        </activity>
+        <activity
+            android:name="com.example.marketapp.OrderRadioActivity"
+            android:label="@string/title_activity_order_radio" >
+        </activity>
+    </application>
+
+</manifest>

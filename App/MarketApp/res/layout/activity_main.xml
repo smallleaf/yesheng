@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mianactivity_ll"
+    android:background="@drawable/android_layout_bg"
+    android:orientation="vertical" >
+
+  <include 
+      layout="@layout/common_title_tobar"
+      />
+
+    <com.shop.marketapp.widget.AbScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/activity_abscrollview"
+        android:layout_height="match_parent"
+        android:background="@drawable/android_layout_bg"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.shop.marketapp.widget.AdvertiseViewPager
+                android:id="@+id/main_viewpager_advertise"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:background="@color/white" >
+            </com.shop.marketapp.widget.AdvertiseViewPager>
+
+            <LinearLayout
+                android:id="@+id/main_index_product_images_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal" />
+
+                 <com.shop.marketapp.widget.ScrollLayout
+                android:id="@+id/main_gridview_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+            </com.shop.marketapp.widget.ScrollLayout>
+            
+           <LinearLayout 
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:background="@color/white"
+               >
+               <ImageView 
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/main_recooment_picture"
+                   android:layout_marginLeft="5dp"
+                   />
+               <TextView 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   style="@style/top_title_text_style"
+                   android:text="今日特价"
+                   android:textSize="18sp"
+                   android:textColor="@color/red"
+                   />
+           </LinearLayout>  
+           
+             <com.shop.marketapp.widget.ScrollLayout
+                android:id="@+id/main_gridview_today_recomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+            </com.shop.marketapp.widget.ScrollLayout>
+            
+               <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            style="@style/top_title_text_style"
+            android:background="@color/white"
+            android:text="健康美食"
+            android:textSize="18sp"
+            android:textColor="@color/red"
+            />
+        </LinearLayout>
+        
+      
+    </com.shop.marketapp.widget.AbScrollView>
+
+</LinearLayout>

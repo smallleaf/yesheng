@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	  <LinearLayout 
+	    android:id="@+id/details_merchant_ll_kind"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:orientation="horizontal"
+	    android:divider="@drawable/common_vertical_divider"
+	    android:showDividers="middle"
+	    >
+
+	        <TextView
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:drawablePadding="-20dp"
+	            android:drawableRight="@drawable/common_arrow"
+	            android:text="@string/activity_details_news_goods_sorts" />
+	    
+	    <TextView
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="@string/activity_details_news_goods_hot" />
+	    
+	    <TextView
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="@string/activity_details_news_goods_recipe" />
+	    
+	    <TextView
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="@string/activity_details_news_goods_screen" />
+	</LinearLayout>
+</LinearLayout>

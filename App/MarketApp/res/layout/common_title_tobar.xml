@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/title_red" >
+
+        <TextView
+            android:id="@+id/title_location"
+            style="@style/top_title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="正在获取地址.." 
+            android:maxEms="6"
+            android:ellipsize = "start" 
+            android:singleLine="true"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/title_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/title_location"
+            android:layout_toLeftOf="@+id/common_title_tv_titletext"
+            android:src="@drawable/main_loaction"
+            android:visibility="gone"
+             />
+
+        <TextView
+            android:id="@+id/common_title_tv_titletext"
+            style="@style/top_title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="买买买"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/title_setting"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/common_setting" />
+    </RelativeLayout>
+</LinearLayout>

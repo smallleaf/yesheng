@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+
+  <include 
+      android:id="@+id/acitivity_buy_car_title"
+      layout="@layout/common_title_tobar"
+      />
+
+  	<RelativeLayout
+	        android:id="@+id/acitivity_buy_car_rl_login"
+	        android:layout_width="match_parent"
+	        android:layout_below="@+id/acitivity_buy_car_title"
+	        android:layout_height="45dp"
+	        android:background="@drawable/common_relative_click"
+	       	android:clickable="true"
+	        android:visibility="gone"
+	         >
+
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="28dp"
+	            android:layout_marginLeft="8dp"
+	            android:layout_centerVertical="true"
+	            android:text="亲，您还没有登陆噢！"
+	            style="@style/text_black_style"
+	            
+	            />
+	         <ImageView 
+	            android:layout_width="20dp"
+	             android:layout_alignParentRight="true"
+	            android:layout_height="20dp"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/common_next_arrow"
+	            android:layout_marginRight="5dp"
+	            />
+	    </RelativeLayout>
+  	<com.shop.marketapp.widget.RefreshSupportListView
+  	    android:id="@+id/activity_buy_car_rslv"
+  	    android:layout_width="match_parent"
+  	    android:layout_below="@+id/acitivity_buy_car_title"
+  	    android:layout_above="@+id/detials_merchant_ll_bottom"
+  	    android:layout_height="wrap_content"
+  	    />
+  	
+  		<LinearLayout 
+		    android:id="@+id/detials_merchant_ll_bottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:background="@color/white"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true"
+	    >
+	    <TextView
+	        android:id="@+id/common_goods_sun_tv_sum"
+	        style="@style/top_title_text_style"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="8"
+	        android:layout_marginLeft="15dp"
+	        android:textColor="@color/low_blue"
+	        android:gravity="center_vertical"
+	        android:text="  总共0元"
+	        android:textSize="16sp" />
+		<Button 
+		    android:id="@+id/common_goods_bt_gotobuy"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="结算"
+		    android:layout_weight="1"
+		    android:background="@drawable/common_title_right_tv_click"
+		    />
+	</LinearLayout>
+</RelativeLayout>

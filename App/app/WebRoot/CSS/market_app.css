@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.merket_body{
+	margin:0 auto;
+	max-width:640px;
+	min-width:300px;
+}
+.merket_header{
+	background: rgba(20, 20, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    font-size: 12px;
+    height: 1.2em;
+    line-height: 1.2em;
+    margin-left: 10px;
+    margin-top: 6px;
+    width: 80%;
+}

@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_layout_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_tobar" />
+
+    <RelativeLayout
+        android:id="@+id/activity_delivery_rl_add"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/common_relative_click"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/red"
+            android:text="@string/activity_delivery_address_add" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/common_next_arrow" />
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+        android:id="@+id/activity_delivery_rl_gpsagain"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/common_relative_click"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/red"
+            android:text="@string/activity_delivery_address_dinwei" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/gpsdinwei" />
+        
+       
+    </RelativeLayout>
+    <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          android:background="@color/white"
+        >
+        <TextView
+             android:id="@+id/activity_delivery_tv_gpsagain"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:text="武汉纺织大学阳光校区" />
+        
+    </RelativeLayout>
+     
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/activity_delivery_address"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        />
+	<ListView 
+	    android:id="@+id/activity_delivery_lv_address_manager"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/white"
+	    ></ListView>
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    >
+    
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+         >
+
+        <TextView 
+            android:id="@+id/activity_buy_car_merchant"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="叶老板的大商店"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/low_red"
+            />
+        <TextView 
+	        android:id="@+id/order_list_item_tv_state"
+	         android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dp"
+	        android:gravity="center"
+	        android:textColor="@color/yellow"
+	        android:text="交易成功"
+	        android:textSize="14sp"
+	        />
+    </RelativeLayout>
+    <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        >
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+              android:layout_weight="0.005"
+            android:layout_height="match_parent"
+            >
+            <CheckBox
+                android:id="@+id/activity_buy_car_choose"
+                style="@style/chooseStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:checked="true"
+               />
+        </RelativeLayout>
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:gravity="center_vertical"
+             android:padding="10dp" >
+
+	    <ImageView 
+	        android:id="@+id/activity_details_iv_goods"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/vegatable"
+	        />
+	</RelativeLayout>
+	
+	<RelativeLayout 
+	    android:layout_weight="0.8"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center_vertical"
+	    android:padding="10dp"
+	    >
+	    <TextView 
+	        android:id="@+id/activity_detils_merchant_tv_goodsname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:text="神奇养颜葡萄"
+	        android:textSize="16sp"
+	        style="@style/text_low_blue_style"
+	        />
+	       <ImageView
+	        android:id="@+id/activity_buy_car_delete"
+	        android:layout_width="26dp"
+	        android:layout_height="26dp"
+	        android:layout_alignRight="@+id/activity_detils_merchant_tv_goods_moneylabel"
+	        android:layout_alignTop="@+id/activity_detils_merchant_tv_goodsname"
+	        android:src="@drawable/delete" />
+	    <TextView
+	        android:id="@+id/activity_detils_merchant_tv_goods_comment"
+	         android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:text="用户暂无评论"
+	        android:layout_below="@+id/activity_detils_merchant_tv_goodsname"
+	        android:layout_marginTop="8dp"
+	         android:textColor="@color/gray2"
+	         android:textSize="14sp"
+	        />
+	    <TextView
+	        android:id="@+id/activity_detils_merchant_tv_goods_price"
+	         android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:text="单价 1.2元/斤"
+	        android:layout_below="@+id/activity_detils_merchant_tv_goods_comment"
+	        android:layout_marginTop="8dp"
+	         android:textColor="@color/gray2"
+	         android:textSize="14sp"
+	        />
+	    <TextView 
+	        android:id="@+id/activity_detils_merchant_tv_goods_moneylabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/activity_detils_merchant_tv_goodsname"
+	        android:layout_toRightOf="@+id/activity_detils_merchant_tv_goods_comment"
+	        android:layout_marginTop="8dp"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:textColor="@color/gray2"
+	        android:text="已选择"
+	        android:textSize="13sp"
+	        />
+	    <TextView 
+	        android:id="@+id/activity_detils_buy_tv_goods_money"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/activity_detils_merchant_tv_goods_moneylabel"
+	        android:layout_marginTop="8dp"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:textColor="@color/low_red"
+	        android:text="0元"
+	        android:textSize="15sp"
+	        />
+
+	 
+
+	</RelativeLayout>
+    </LinearLayout>
+  
+</LinearLayout>

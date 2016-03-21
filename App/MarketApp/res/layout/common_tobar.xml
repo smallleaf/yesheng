@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/common_title"
+     >
+  
+	<TextView 
+	    android:id="@+id/common_tv_back"
+	    style="@style/back_view"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:onClick="doBack"
+	    />
+	
+	<ImageView 
+	    android:id="@+id/common_iv_search"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/common_search"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="10dp"
+	    android:layout_centerVertical="true"
+	    android:visibility="gone"
+	    />
+	<TextView
+	    android:id="@+id/common_tv_right_text"
+	     android:layout_width="60dp"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentRight="true"
+	    android:textSize="16sp"
+	    android:gravity="center"
+	    android:text="注册"
+	    android:background="@drawable/common_title_right_tv_click"
+	    android:visibility="gone"
+	    ></TextView>
+</RelativeLayout>

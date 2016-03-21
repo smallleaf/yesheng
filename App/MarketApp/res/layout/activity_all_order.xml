@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_transparent"
+    android:orientation="vertical" >
+
+<include 
+      layout="@layout/common_title_tobar"
+      />
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        >
+        
+        <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/Order_radioGroud_tableGroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/main_navigation_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/order_rb_main"
+                style="@style/Order_tab_Top"
+                android:checked="true"
+                android:text="全部"
+                 />
+
+            <RadioButton
+                android:id="@+id/order_rb_unpaid"
+                style="@style/Order_tab_Top"
+                android:checked="false"
+                android:text="待付款" />
+
+            <RadioButton
+                android:id="@+id/order_rb_undelivery"
+                style="@style/Order_tab_Top"
+                android:checked="false"
+                android:text="待发货" />
+
+            <RadioButton
+                android:id="@+id/main_rb_unrecieve"
+                style="@style/Order_tab_Top"
+                android:checked="false"
+                android:text="待收货" />
+            <RadioButton
+                android:id="@+id/main_rb_uncomment"
+                style="@style/Order_tab_Top"
+                android:checked="false"
+                android:text="待评价" />
+        </RadioGroup>
+        
+           <FrameLayout 
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/android_layout_bg" 
+            ></FrameLayout>
+            </LinearLayout>
+    </TabHost>
+
+         
+        
+</LinearLayout>

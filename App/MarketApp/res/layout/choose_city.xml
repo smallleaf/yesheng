@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/choosecity"
+    android:background="@drawable/bg_transparent" >
+
+    
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/city_popup"
+         android:background="#ffffff"
+         android:orientation="horizontal"
+        >
+        
+        <Button 
+            android:id="@+id/choosecity_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+         android:background="@drawable/common_rl_whitegray_click"
+            android:text="取消"
+            />
+        <Button 
+            android:id="@+id/choosecity_confin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+           android:background="@drawable/common_rl_whitegray_click"
+            android:text="确认"
+            />
+    </LinearLayout>
+	<LinearLayout
+	    android:id="@+id/city_popup"
+	    android:layout_width="match_parent"
+	    android:layout_height="180dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="#ffffff"
+	    android:orientation="horizontal"
+	    >
+
+	    <com.shop.marketapp.view.wheelview.WheelView
+	        android:id="@+id/province"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:layout_gravity="center_vertical"
+	        />
+	    <com.shop.marketapp.view.wheelview.WheelView
+	        android:id="@+id/city"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:layout_gravity="center_vertical"
+	         />
+
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/android_activities_bg"
+     >
+	<include 
+	    layout="@layout/common_title_tobar" />"
+	
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="190dp"
+	    android:background="@color/color_activity_person_login_bg"
+	    >
+	    <com.shop.marketapp.widget.CircleImageView 
+	        android:id="@+id/activity_person_civ_user_pic"
+	        android:layout_width="wrap_content"
+	        android:layout_height="90dp"
+	        android:src="@drawable/android_layout_bg"
+	        android:layout_centerVertical="true"
+	        android:layout_centerHorizontal="true"
+	        />
+	    <Button 
+	        android:id="@+id/activity_person_bt_login"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/activity_person_civ_user_pic"
+	        android:layout_centerVertical="true"
+	        android:layout_centerHorizontal="true"
+	        android:text="@string/activity_person_login"
+	        android:layout_marginTop="8dp"
+	        android:visibility="gone"
+	        />
+	    
+	    <TextView 
+	        android:id="@+id/activity_person_tv_username"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/activity_person_civ_user_pic"
+	        android:layout_centerVertical="true"
+	        android:layout_centerHorizontal="true"
+	        android:text="续写青春"
+	        android:textColor="@color/black"
+	        android:layout_marginTop="8dp"
+	        android:visibility="gone"
+	        />
+	    
+	</RelativeLayout>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    >
+
+	    <RelativeLayout
+	        android:id="@+id/personal_rl_allbill"
+	        android:layout_width="match_parent"
+	        android:layout_height="45dp"
+	        android:background="@drawable/common_relative_click"
+	        android:clickable="true"
+	         >
+
+	        <ImageView 
+	            android:id="@+id/personal_iv_allbill"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:src="@drawable/personal_allbill"
+	            android:layout_centerVertical="true"
+	            />
+	        <TextView 
+	            android:layout_toRightOf="@+id/personal_iv_allbill"
+	            android:layout_width="wrap_content"
+	            android:layout_height="28dp"
+	            android:layout_marginLeft="8dp"
+	            android:layout_centerVertical="true"
+	            android:text="@string/activity_person_all_bill"
+	            style="@style/text_black_style"
+	            
+	            />
+	         <ImageView 
+	            android:layout_width="20dp"
+	             android:layout_alignParentRight="true"
+	            android:layout_height="20dp"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/common_next_arrow"
+	            android:layout_marginRight="5dp"
+	            />
+	    </RelativeLayout>
+	     <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+	    <RelativeLayout
+	        android:id="@+id/personal_rl_all_comment"
+	        android:layout_width="match_parent"
+	        android:layout_height="45dp"
+	        android:background="@drawable/common_relative_click"
+	        android:clickable="true"
+	         >
+
+	        <ImageView 
+	            android:id="@+id/personal_iv_all_comment"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:src="@drawable/activity_person_coment"
+	            android:layout_centerVertical="true"
+	            />
+	        <TextView 
+	            android:layout_toRightOf="@+id/personal_iv_all_comment"
+	            android:layout_width="wrap_content"
+	            android:layout_height="28dp"
+	            android:layout_marginLeft="8dp"
+	            android:layout_centerVertical="true"
+	            android:text="@string/activity_person_all_comment"
+	            style="@style/text_black_style"
+	            
+	            />
+	         <ImageView 
+	            android:layout_width="20dp"
+	             android:layout_alignParentRight="true"
+	            android:layout_height="20dp"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/common_next_arrow"
+	            android:layout_marginRight="5dp"
+	            />
+	    </RelativeLayout>
+	    <RelativeLayout
+	        android:id="@+id/personal_rl_service"
+	        android:layout_width="match_parent"
+	        android:layout_marginTop="15dp"
+	        android:layout_height="45dp"
+	        android:background="@drawable/common_relative_click"
+	        android:clickable="true"
+	         >
+
+	        <ImageView 
+	            android:id="@+id/personal_iv_service"
+	            android:layout_width="28dp"
+	            android:layout_height="28dp"
+	            android:src="@drawable/phone"
+	            android:layout_centerVertical="true"
+	            />
+	        <TextView 
+	            android:layout_toRightOf="@+id/personal_iv_service"
+	            android:layout_width="wrap_content"
+	            android:layout_height="28dp"
+	            android:layout_marginLeft="8dp"
+	            android:layout_centerVertical="true"
+	            android:text="@string/activity_person_service"
+	            style="@style/text_black_style"
+	            
+	            />
+	         <ImageView 
+	            android:layout_width="20dp"
+	             android:layout_alignParentRight="true"
+	            android:layout_height="20dp"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/common_next_arrow"
+	            android:layout_marginRight="5dp"
+	            />
+	    </RelativeLayout>
+	</LinearLayout>
+	    
+</LinearLayout>

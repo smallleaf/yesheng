@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 公共的颜色 -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="pink">#fdf9eb</color>
+    <color name="gray">#D6D6D6</color>
+    <color name="gray2">#969696</color>
+    <color name="yellow">#fe6600</color>
+    <color name="red">#f40707</color>
+    <color name="low_red">#DA70D6</color>
+    <color name="blue">#0000FF</color>
+    <color name="low_blue">#7171C6</color>
+    <color name="hight_white">#F0F8FF</color>
+    <color name="common_relative_press">#00B2EE</color>
+    <color name="cornflowerblue">#6495ED</color>
+    <color name="buy_pop">#FFE4B5</color>
+    <color name="toumin">#e00000</color>
+    <color name="ptr_transparent">#00000000</color>
+    <color name="low_blue2">#9AC0CD</color>
+    <color name="details_merchant_buy_rl">#EEB4B4</color>
+    
+    
+    <!-- 标题颜色 -->
+    <color name="title_red">#FA8072</color>
+    <color name="common_title">#FF82AB</color>
+    <color name="text_low_black">#6B6B6B</color>
+    <color name="text_tv_press">#CDC5BF</color>
+    
+    <!-- 图片颜色 -->
+    <color name="login_button_press">#F0F8FF</color>
+    <color name="login_button_unpress">#F4A460</color>
+    <color name="popwindow_bg">#B0B0B0</color>
+    
+    <color name="color_activity_person_login_bg">#BCD2EE</color>
+    
+</resources>

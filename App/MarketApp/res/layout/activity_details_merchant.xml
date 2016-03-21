@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+	<include 
+	    android:id="@+id/common_details_merchant_title"
+	    layout="@layout/common_tobar"
+	    />
+	  <LinearLayout 
+	    android:id="@+id/details_merchant_ll_kind"
+	    android:layout_width="match_parent"
+	    android:layout_below="@+id/common_details_merchant_title"
+	    android:layout_height="40dp"
+	    android:orientation="horizontal"
+	    android:background="@color/hight_white"
+	    android:showDividers="middle"
+	    >
+
+	        <TextView
+	            android:id="@+id/details_merchant_tv_goodkinds"
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:drawablePadding="-20dp"
+	            android:drawableRight="@drawable/common_arrow"
+	            android:text="@string/activity_details_news_goods_sorts" />
+	    
+	    <TextView
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="@string/activity_details_news_goods_hot" />
+	    
+	    <TextView
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="@string/activity_details_news_goods_recipe" />
+	    
+	    <TextView
+	            style="@style/text_black_style"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="1"
+	            android:text="@string/activity_details_news_goods_screen" />
+	</LinearLayout>
+	<ListView 
+	    android:id="@+id/details_merchant_lv_content"
+	    android:layout_width="match_parent"
+	    android:layout_above="@+id/detials_merchant_ll_bottom"
+	    android:layout_below="@+id/details_merchant_ll_kind"
+	    android:layout_height="match_parent"
+	    android:numColumns="1"
+	    ></ListView>
+	<LinearLayout 
+		    android:id="@+id/detials_merchant_ll_bottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:background="@color/white"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true"
+	    >
+
+	    <RelativeLayout
+	        android:id="@+id/common_goods_sun_rl_goods"
+	        android:layout_width="80dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:background="@drawable/common_rl_whitegray_click"
+	        android:gravity="center" >
+	          <ImageView
+	        android:layout_width="80dp"
+	        android:layout_height="30dp"
+	        android:src="@drawable/main_bottom_tab_cart_normal" />
+	    </RelativeLayout>
+	  
+
+	    <TextView
+	        android:id="@+id/common_goods_sun_tv_sum"
+	        style="@style/top_title_text_style"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_marginLeft="15dp"
+	        android:textColor="@color/low_blue"
+	        android:gravity="center_vertical"
+	        android:text="  总共0元"
+	        android:textSize="16sp" />
+		<Button 
+		    android:id="@+id/common_goods_bt_gotobuy"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="结算"
+		    android:layout_weight="1"
+		    android:background="@drawable/common_title_right_tv_click"
+		    />
+	</LinearLayout>
+</RelativeLayout>
